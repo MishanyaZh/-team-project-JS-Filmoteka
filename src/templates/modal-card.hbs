@@ -1,0 +1,68 @@
+<div class='trailer__container visually-hidden'></div>
+<div class='modal--close'></div>
+<div class='modal__content_left'>
+  <div class='trailer__icon'>
+  </div>
+  <img class='film-img' src='{{poster_path}}' alt='Poster' />
+</div>
+<div class='modal__content_right'>
+  <div class='modal__content_right-title'>
+    <h1 class='modal-title'>{{title}}</h1>
+  </div>
+  <div class='modal__content_right-info'>
+    <table class='film__info'>
+      <tbody class='table'>
+
+        <tr class='flex'>
+          <td class='film__info--left'>
+            <h3 class='info-subtitle'>Vote / Votes</h3>
+          </td>
+          <td class='film__info--right'>
+            <span class='info-value info-value--vote vote-orange'>{{vote_average}}</span>
+            <span class='info-value info-value--vote-or'> / </span>
+            <span class='info-value info-value--vote vote-grey'>{{vote_count}}</span>
+          </td>
+        </tr>
+
+        <tr class='flex'>
+          <td class='film__info--left'>
+            <h3 class='info-subtitle'>Popularity</h3>
+          </td>
+          <td class='film__info--right'>
+            <span class='info-value'>{{popularity}}</span></td>
+        </tr>
+
+        <tr class='flex'>
+          <td class='film__info--left'>
+            <h3 class='info-subtitle'>Original Title</h3>
+          </td>
+          <td class='film__info--right'>
+            <span class='info-value info-value--uppercase'>{{original_title}}</span></td>
+        </tr>
+
+        <tr class='flex'>
+          <td class='film__info--left'>
+            <h3 class='info-subtitle'>Genre</h3>
+          </td>
+
+          <td class='film__info--right'>
+            <ul class='info-value info-value--genres'>
+              {{#each this.genres}}
+                <li class='info-value--list'>{{this.name}}</li>
+              {{/each}}
+
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class='modal__content_right-about'>
+    <h2 class='about-subtitle'>ABOUT</h2>
+    <p class='about-info'>{{overview}}</p>
+  </div>
+  <div class='modal__content_right-btns'>
+    <button type='button' class='modal-btns modal-btns--watched' id='watchedjs'>add to watched</button>
+    <button type='button' class='modal-btns modal-btns--queue'>add to queue</button>
+  </div>
+</div>
